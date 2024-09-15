@@ -30,3 +30,21 @@ export interface FormRadioProps {
   defaultValue?: string;
   hidden?: string; //work on this
 }
+
+///Select 
+
+export interface OptionType {
+	label: string;
+	value: string;
+	id?: string;
+}
+
+export interface SelectInputProps {
+	name: string;
+	label?: string;
+	options: OptionType[];
+	defaultValue?: string | string[] | null;
+	isMulti?: boolean;
+	className?: string;
+	onChange?: (selectedOption: OptionType | OptionType[] | null) => void;
+}
